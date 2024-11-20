@@ -1,14 +1,15 @@
+/**
+ * This interface defines the contract for classes that implement it.
+ * It contains methods that must be implemented by any implementing class.
+ */
 public interface Contract {
 
-    void grab(String item);
-    String drop(String item);
-    void examine(String item);
-    void use(String item);
-    boolean walk(String direction);
-    boolean fly(int x, int y);
-    Number shrink();
-    Number grow();
-    void rest();
-    void undo();
+    /** An action the class must perform. */
+    void makePromise(String promise);
 
+    /** Execute the promised action. */
+    void fulfillPromise();
+
+    /** Return the status of the promise. */
+    String checkPromiseStatus();
 }
